@@ -1,4 +1,3 @@
-// authentication controller
 const User = require('../models/User')
 const {StatusCodes} = require('http-status-codes')
 const {BadRequestError} = require('../errors')
@@ -14,7 +13,7 @@ const register = async (req, res) => {
      .status(StatusCodes.CREATED)
      .json({user:user.name, token})
 
-  }
+}
 const login = async (req, res) => {
     const {email, password} = req.body
 
